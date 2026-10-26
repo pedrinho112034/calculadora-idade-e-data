@@ -1,0 +1,15 @@
+from datetime import datetime
+
+# Solicita a data ao usuário
+data_str = input("Digite uma data (dd/mm/aaaa): ")
+
+# Converte a string para data
+data_passada = datetime.strptime(data_str, "%d/%m/%Y")
+
+# Data atual
+hoje = datetime.now()
+
+# Calcula a diferença
+dias_passados = (hoje - data_passada).days
+
+print(f"Já se passaram {dias_passados} dias desde {data_str}.")
